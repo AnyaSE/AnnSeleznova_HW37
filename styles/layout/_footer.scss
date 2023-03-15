@@ -1,0 +1,111 @@
+.footer {
+  background: #41403E;
+
+  .reference {
+
+    @media (min-width: $tablet) {
+      padding-bottom: 60px;
+    }
+
+    @media (min-width: $desktop) {
+      padding-bottom: 72px;
+    }
+
+    .reference__logo {
+      display: block;
+      margin: 25px 0;
+
+      @media (min-width: $tablet) {
+        margin: 30px 0;
+      }
+    }
+
+    .reference__group {
+
+      @media (min-width: $tablet) {
+        @include setFlexbox (column, start, center, nowrap);
+        border-right: 2px solid #A4A3A1;
+      }
+
+      .reference__block {
+
+        .reference__title {
+          @include setRobbody;
+          font-weight: 600;
+          text-transform: uppercase;
+          color: #FDFDFD;
+          margin-bottom: 20px;
+        }
+
+        .reference__list {
+          margin: 0;
+          padding: 0;
+
+          .reference__item {
+
+            .reference__link {
+              @include setLinkdecor;
+              @include setRobbody;
+              color: #FDFDFD;
+
+              &:hover {
+                color: #c2c3b9;
+              }
+            }
+          }
+        }
+
+        .reference__social {
+          .social__link {
+            display: inline-block;
+            background: url(../img/facebook.svg) no-repeat;
+            @include setDimensions (36px, 36px, 50%);
+          }
+
+          .social__link--primary {
+            background: url(../img/twitter.svg) no-repeat;
+            @include setDimensions (38.9px, 33px, 0);
+            margin: 0 15px;
+
+            @media (min-width: $desktop) {
+              margin: 0 30px;
+            }
+          }
+
+          .social__link--secondary {
+            background: url(../img/insta.svg) no-repeat;
+            @include setDimensions (37px, 36px, 0);
+          }
+        }
+      }
+    }
+
+    .reference__group--primary {
+      @media (max-width: $mobilemax) {
+        display: none;
+      }
+    }
+
+    .reference__group--secondary {
+      @media (max-width: $mobilemax) {
+        border-bottom: 2px solid #A4A3A1;
+        padding-bottom: 25px;
+      }
+    }
+
+    .reference__group--special {
+      @media (max-width: $mobilemax) {
+        padding: 25px 0;
+      }
+    }
+
+    .reference__group--additional {
+      border: none;
+
+      @media (max-width: $mobilemax) {
+        display: none;
+      }
+    }
+
+  }
+}

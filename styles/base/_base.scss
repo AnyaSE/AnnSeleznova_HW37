@@ -1,0 +1,29 @@
+//Roboto regular 400, medium 500
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+//Bluu Next
+@font-face {
+  font-family: $bluunext;
+  src: url("../fonts/BluuNext-Titling.ttf") format("truetype"),
+    url("../fonts/bluunext-titling.woff2") format("woff2"),
+    url("../fonts/bluunext-titling.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+//Harry Potter
+@font-face {
+  font-family: $hp;
+  src: url("../fonts/HARRYP__.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  @include setFont ($roboto, 400, 14px, 16px);
+  // @include setRobbody;
+}
+
+.wrapper {
+  @include setWrapper (92%, 0 auto, 0);
+}

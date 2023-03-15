@@ -1,0 +1,243 @@
+//Variables
+$mobilemax: 767px;
+$tablet: 768px;
+$desktop: 1280px;
+$roboto: 'Roboto',
+sans-serif;
+$bluunext: "bluu_nexttitling";
+$hp: "HarryP";
+$color--primary: #6352CE;
+$color--accent: gold;
+$color--gradient: linear-gradient(90deg, #ECBC40 0%, #FFF1BA 51.04%, #EDBD41 100%);
+$color--disabled: rgba(164, 163, 161, 1);
+$color--secondary: rgba(255, 240, 183, 1);
+$color--additional: rgba(226, 226, 226, 1);
+$color--background: rgba(72, 72, 61, 1);
+$font-color--main: white;
+$font-color--disabled: rgba(94, 93, 91, 1);
+$font-color--black: black;
+$width_wrap: 92%;
+
+//Mixins
+@mixin setWrapper ($width, $margin, $padding) {
+  width: $width;
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin setFlexbox ($dir, $jus, $align, $wrap) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $jus;
+  align-items: $align;
+  flex-wrap: $wrap;
+  flex-shrink: 0;
+}
+
+@mixin setDimensions ($w, $h, $bradius) {
+  width: $w;
+  height: $h;
+  border-radius: $bradius;
+}
+
+@mixin setFont ($family, $fontweight, $size, $linehgt) {
+  font-family: $family;
+  font-size: $size;
+  line-height: $linehgt;
+  font-weight: $fontweight;
+}
+
+@mixin padding($top, $right, $bottom, $left) {
+  padding-top: $top;
+  padding-right: $right;
+  padding-bottom: $bottom;
+  padding-left: $left;
+}
+
+@mixin margin($top, $right, $bottom, $left) {
+  margin-top: $top;
+  margin-right: $right;
+  margin-bottom: $bottom;
+  margin-left: $left;
+}
+
+@mixin setLinkdecor {
+  text-decoration: none;
+  transition: .3s;
+
+  &:active {
+    text-decoration: none;
+    transition: .3s;
+  }
+}
+
+//Roboto
+@mixin setRobh1 {
+  @include setFont ($roboto, 600, 64px, 72px);
+}
+
+@mixin setRobh2 {
+  @include setFont ($roboto, 600, 24px, 32px);
+}
+
+@mixin setRobtitle {
+  @include setFont ($roboto, 600, 20px, 28px);
+}
+
+@mixin setRobsubtitle {
+  @include setFont ($roboto, 600, 16px, 24px);
+}
+
+@mixin setRobsubauto {
+  @include setFont ($roboto, 500, 14px, auto);
+}
+
+@mixin setRobbody {
+  @include setFont ($roboto, 400, 14px, 16px);
+}
+
+//Bluu Next
+
+@mixin setBluuh1 {
+  @include setFont ($bluunext, 600, 64px, 72px);
+}
+
+@mixin setBluuh2 {
+  @include setFont ($bluunext, 600, 24px, 32px);
+}
+
+@mixin setBluutitle {
+  @include setFont ($bluunext, 600, 20px, 28px);
+}
+
+@mixin setBluuhsubt {
+  @include setFont ($bluunext, 600, 36px, 32px)
+}
+
+@mixin setBluusubtitle {
+  @include setFont ($bluunext, 600, 16px, 24px);
+}
+
+@mixin setBluubody {
+  @include setFont ($bluunext, 600, 14px, 17px);
+}
+
+@mixin setBluucaption {
+  @include setFont ($bluunext, 600, 12px, 16px);
+}
+
+//Harry Potter
+@mixin setHp {
+  @include setFont ($hp, 400, 64px, 72px);
+}
+
+@mixin setHpsub {
+  @include setFont ($hp, 400, 24px, 32px);
+}
+
+//Buttons 
+
+@mixin Button_logandhome () {
+  width: 80px;
+  display: inline;
+  @include padding (7px, 20px, 7px, 20px);
+  background: $color--primary;
+  color: $font-color--main;
+  @include setFont ($roboto, 500, 14px, auto);
+  text-align: center;
+  border-radius: 25px;
+
+  &:hover {
+    background: #988CE3;
+    transition: 500ms ease-in;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@mixin Button_std180 () {
+  width: 180px;
+  display: inline;
+  @include padding (12px, 39px, 12px, 39px);
+  background: $color--primary;
+  color: $font-color--main;
+  @include setFont ($roboto, 500, 14px, auto);
+  text-align: center;
+  border-radius: 25px;
+
+  &:hover {
+    background: #988CE3;
+    transition: 500ms ease-in;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@mixin Button_accent () {
+  width: 180px;
+  display: inline;
+  @include padding (12px, 39px, 12px, 39px);
+  background: $color--gradient;
+  color: $font-color--black;
+  @include setFont ($roboto, 500, 14px, auto);
+  text-align: center;
+  border-radius: 25px;
+
+  &:hover {
+    background: $color--secondary;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@mixin Button_std280 () {
+  width: 280px;
+  display: inline;
+  @include padding (12px, 50px, 12px, 50px);
+  background: $color--primary;
+  color: $font-color--main;
+  @include setFont ($roboto, 500, 14px, auto);
+  text-align: center;
+  border-radius: 25px;
+
+  &:hover {
+    background: #988CE3;
+    transition: 500ms ease-in;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@mixin Button_disabled280 () {
+  width: 280px;
+  display: inline;
+  @include padding (12px, 50px, 12px, 50px);
+  background: $color--disabled;
+  color: $font-color--disabled;
+  @include setFont ($roboto, 500, 14px, auto);
+  text-align: center;
+  border-radius: 25px;
+}
+
+@mixin Button_accent280 () {
+  width: 280px;
+  display: inline;
+  @include padding (12px, 50px, 12px, 50px);
+  background: $color--gradient;
+  color: $font-color--black;
+  @include setFont ($roboto, 500, 14px, auto);
+  text-align: center;
+  border-radius: 25px;
+
+  &:hover {
+    background: $color--secondary;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@mixin Button_pay () {
+  width: 280px;
+  display: inline;
+  @include padding (12px, 50px, 12px, 50px);
+  background: $color--additional;
+  color: $font-color--black;
+  @include setFont ($roboto, 500, 14px, auto);
+  text-align: center;
+  border-radius: 25px;
+}

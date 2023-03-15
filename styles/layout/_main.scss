@@ -1,0 +1,1016 @@
+#homepage {
+  .main {
+    .banner {
+      background: url(../img/discovbanner.png) no-repeat scroll center;
+      transition: 2s background;
+      background-size: cover;
+      background-attachment: fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+
+      .banner__headline {
+        @include setHp;
+        color: $font-color--main;
+        @include setWrapper (340px, 70px auto, 0);
+
+        @media (min-width: $tablet) {
+          @include setWrapper (400px, 162px 0, 0);
+        }
+      }
+
+      .banner__group {
+        @include setFlexbox (row, center, center, nowrap);
+
+        .banner__link {
+          @include Button_accent;
+          @include setLinkdecor;
+          display: block;
+          width: 205px;
+          margin-bottom: 50px;
+
+          @media (min-width: $tablet) {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .cards {
+      background-color: $color--background;
+
+      .wrapper {
+        @media (max-width: $mobilemax) {
+          width: 100%;
+        }
+
+        .cards__headline {
+          @include setBluuh2;
+          color: #FDFDFD;
+          text-align: center;
+          margin: 20px 0;
+
+          @media (min-width: $tablet) {
+            margin: 35px 0;
+          }
+
+          @media (min-width: $desktop) {
+            margin: 45px 0;
+          }
+        }
+
+        .cards__container {
+
+          .cards__item {
+
+            @media (max-width: $mobilemax) {
+              background: url(../img/studiotour.png) no-repeat;
+              background-size: cover;
+              @include setFlexbox (column, start, center, nowrap);
+            }
+
+            @media (min-width: $tablet) {
+              background: none;
+              @include setFlexbox (column, space-between, start, nowrap);
+            }
+
+            .cards__group {
+
+              .cards__picture {
+                display: none;
+
+                @media (min-width: $tablet) {
+                  display: block;
+                  @include setDimensions (100%, 200px, 25px);
+                  object-fit: cover;
+                }
+
+                @media (min-width: $desktop) {
+                  height: 400px;
+                }
+              }
+
+              .cards__title {
+                @include setRobh2;
+                color: $font-color--main;
+                margin: 150px 0 30px;
+
+                @media (min-width: $tablet) {
+                  margin: 30px 0 35px;
+                }
+
+                @media (min-width: $desktop) {
+                  margin: 30px 0 56px;
+                }
+              }
+
+              .cards__list {
+                @media (max-width: $mobilemax) {
+                  display: none;
+                }
+
+                @media (min-width: $tablet) {
+                  @include setWrapper (100%, 0 0 42px, 0)
+                }
+
+                @media (min-width: $desktop) {
+                  @include setWrapper (100%, 0 0 67px, 0)
+                }
+
+                .cards__list-item {
+                  @include setFlexbox (row, start, start, nowrap);
+
+
+                  .fa-check {
+                    display: inline-block;
+                    margin-right: 14px;
+                    color: $color--secondary;
+                  }
+
+                  .list__text {
+                    color: $font-color--main;
+                    margin: 0 0 15px;
+                    @include setRobbody;
+                  }
+                }
+              }
+            }
+
+            .cards__link {
+              @include Button_std280;
+              width: 210px;
+              @include setLinkdecor;
+              display: block;
+              margin-bottom: 94px;
+            }
+          }
+
+          .cards__item-primary {
+            @media (max-width: $mobilemax) {
+              background: url(../img/cursed.png) no-repeat;
+              background-size: cover;
+              margin: 20px 0;
+            }
+          }
+
+          .cards__item-secondary {
+            @media (max-width: $mobilemax) {
+              background: url(../img/locations.png) no-repeat;
+              background-size: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#autho {
+  background-image: url(../img/authorization/Background_autho.png);
+  margin: 0 auto;
+  height: 100%;
+
+  .title__autho {
+    @include setFlexbox (row, space-around, center, wrap);
+    width: $width_wrap;
+    margin: 5% auto;
+
+    .heading__autho {
+      @include setHp ();
+      color: $font-color--main;
+      text-align: center;
+    }
+
+    .subtitle__autho {
+      @include setBluusubtitle ();
+      width: 60%;
+      margin-left: 20%;
+      color: $font-color--main;
+      text-align: center;
+      font-style: italic;
+
+      .link__inside {
+        color: gold;
+      }
+    }
+  }
+
+  .main__auto {
+    @include setFlexbox (row, center, center, wrap);
+    width: $width_wrap;
+    margin: 0 auto;
+
+    .form__auto {
+      @include setFlexbox (column, center, center, wrap);
+      @include padding (5%, 5%, 5%, 5%);
+      margin: 5%;
+
+
+      .form__label {
+        @include setRobsubauto ();
+        color: $font-color--main;
+        width: 60%;
+
+        .form__auto--item {
+          @include padding (3%, 3%, 3%, 3%);
+          background: #E3E8FB;
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+
+      .form__link {
+        @include setRobsubauto ();
+        color: $font-color--main;
+        width: 60%;
+        margin-bottom: 2%;
+      }
+
+
+      .subtitle__autho {
+        @include setBluusubtitle ();
+        color: $font-color--main;
+        text-align: center;
+      }
+
+      .btn__disabled {
+        @include Button_disabled280 ();
+        @include padding (12px, 12%, 12px, 12%);
+        @include setLinkdecor ();
+        width: 60%;
+      }
+    }
+
+    .main__item--secondary {
+      @include setFlexbox (column, space-around, center, wrap);
+
+      .text__autho {
+        @include setRobsubauto ();
+        color: $font-color--main;
+        width: 60%;
+        text-align: center;
+      }
+
+      .btn__title--std {
+        @include Button_std280 ();
+        @include setLinkdecor ();
+        @include padding (12px, 12%, 12px, 12%);
+        width: 50%;
+      }
+    }
+
+    .main__item--additional {
+      @include setFlexbox (column, center, center, wrap);
+
+      .img__autho {
+        @include setWrapper(80%, 1%, 1%);
+        object-fit: cover;
+        height: 250px;
+        border-radius: 25px;
+
+        @media (min-width: $tablet) and (max-width: 1279px) {
+          height: 200px;
+        }
+      }
+    }
+  }
+}
+
+#login_error {
+  background: $color--background;
+  margin: 0 auto;
+
+  .main__login {
+    margin: 5% auto;
+
+    .main__login--primary {
+      @include setFlexbox (column, space-around, center, wrap);
+
+      .subtitle__login {
+        display: block;
+        @include setHp ();
+        color: $font-color--main;
+        text-align: center;
+        width: 80%;
+        @include padding (2%, 5%, 2%, 5%);
+        border-bottom: 2px solid transparent;
+        border-image: $color--gradient;
+        border-image-slice: 1;
+      }
+    }
+
+    .main__login--secondary {
+      @include setFlexbox (column, space-evenly, center, wrap);
+      background: $color--background;
+
+      .text__login {
+        display: block;
+        @include setRobsubauto ();
+        margin: 0;
+        color: $font-color--main;
+        width: 60%;
+        text-align: center;
+        width: 40%;
+      }
+
+      .form__login {
+        @include setFlexbox (column, center, center, wrap);
+        margin: 2%;
+
+        .form__label {
+          @include setRobsubauto ();
+          color: $font-color--main;
+          width: 100%;
+
+          .form__login--item {
+            @include padding (3%, 3%, 3%, 3%);
+            background: #E3E8FB;
+            width: 100%;
+            border-radius: 5px;
+          }
+        }
+
+        .btn__disabled {
+          @include Button_disabled280 ();
+          @include padding (12px, 12%, 12px, 12%);
+          @include setLinkdecor ();
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+#ticket__page {
+  background-color: $color--background;
+  color: $font-color--main;
+
+  .container {
+    @include padding (30px, 0, 0, 0);
+    /*including padding*/
+
+    .row {
+
+      @include padding (40px, 20px, 0, 0);
+      /*including padding*/
+
+      .imgs {
+
+        height: 40vh;
+        /*setting img height*/
+        background-image: url('../img/diagonaley.jpg');
+        /*including background img*/
+        background-repeat: no-repeat;
+        /*setting no repeat*/
+        background-position: center bottom;
+        /*setting position*/
+        background-attachment: fixed;
+        /*fixed position to allow the parallax effect*/
+        box-shadow: 0 0 50px 50px $color--background inset;
+        /*adding box shadow to blur the edges of the image*/
+        z-index: 100;
+      }
+
+      .product__img {
+        border-radius: 25px;
+        /*including border radius*/
+        width: 80%;
+        /*setting the width*/
+        @include margin (30px, 0, 40px, 20px);
+        /*including margin*/
+        @include padding (10px, 10px, 10px, 10px);
+        /*including padding*/
+        border: 1px solid transparent;
+        /*including border outline*/
+        border-image: $color--gradient;
+        /*including border color*/
+        border-image-slice: 1;
+        /*inward offset*/
+        transition: all 2s;
+
+        /*including transition for the animation*/
+        &:hover {
+          opacity: 0.8;
+          /*including opacity*/
+          transform: scale(1.2);
+          /*including scale transformation for images on hover*/
+        }
+
+        @media screen and (min-width: $tablet) {
+          width: 75%;
+          /*setting the width*/
+          @include margin (0, 0, 40px, 20px);
+          /*setting the margin*/
+        }
+
+        @media screen and (min-width: $desktop) {
+          @include margin (50px, 0, 40px, 20px);
+          /*setting the margin*/
+        }
+      }
+
+      .column--secondary {
+        @include padding (0, 0, 0, 10px);
+        /*setting the padding*/
+      }
+
+      .product__content {
+        @include setRobh2 ();
+        /*setting the font for the title*/
+        text-align: center;
+        /*aligning text in the center*/
+        @include padding (0, 5px, 15px, 5px);
+        /*setting the padding*/
+
+        @media screen and (min-width: $tablet) {
+          text-align: left;
+          /*for table & desktop aligning text to the left*/
+          padding: none;
+          /*no padding for table and desktop*/
+        }
+      }
+
+      .nav-tabs {
+
+        border-bottom: 2px solid $color--accent;
+        /*setting the border*/
+
+        .nav-link {
+          color: $font-color--main;
+          /*setting font color*/
+          background: none;
+
+          /*no background for the nav tabs*/
+          &:hover {
+            background: $color--gradient;
+            /*setting the background color for nav tabs on hover*/
+            color: $font-color--black;
+            /*setting the font color for nav tabs on hover*/
+          }
+        }
+      }
+
+      .tab-content {
+
+        &:hover {
+          box-shadow: 10px 5px 10px $color--accent;
+          /*setting box shadow*/
+          border-radius: 25px;
+          /*setting border radius for the tab content*/
+        }
+
+        .tab__details {
+          text-align: left;
+          /*aligning text to the left inside the tab content area*/
+          @include padding (10px, 0, 0, 0);
+          /*including padding*/
+          height: 180px;
+          /*including height for mobile version*/
+          overflow-y: scroll;
+          /*including vertical scroll for mobile*/
+          -webkit-overflow-scrolling: touch;
+          /*touch scroll for mobile*/
+
+          @media screen and (min-width: $tablet) {
+            overflow-y: visible;
+            /*no overflow for table and desktop*/
+            height: 100%;
+            /*setting the height to 100%*/
+            @include margin (0, 0, 0, 5px);
+            /*including the margin*/
+          }
+
+          .tab__link {
+            @include setLinkdecor ();
+            /*removing link styling*/
+            color: $font-color--main;
+
+            /*setting the font color for the links*/
+            &:hover {
+              text-decoration: underline;
+              /*setting the underline for links on hover*/
+            }
+          }
+
+          .info__link {
+            background: $color--gradient;
+            /*setting the color for the link*/
+            background-clip: text;
+            /*clipping the color to the actual text*/
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            /*filling the text with gradient color*/
+          }
+        }
+      }
+
+      .column--special {
+
+        @include padding (0, 30px, 0, 30px);
+        /*including the padding*/
+
+        .price__item {
+
+          @include setBluuh2 ();
+          /*setting the font*/
+          border-top: 1px solid $color--primary;
+          /*adding border top*/
+          @include padding (10px, 0, 0, 0);
+          /*including the padding*/
+
+          @media screen and (min-width: $tablet) {
+            border: none;
+            /*no border for tablet & desktop*/
+          }
+        }
+
+        .price__detail {
+          @include setRobsubtitle ();
+          /*setting the font*/
+          color: $color--disabled;
+          /*including the color*/
+          @include padding (20px, 0, 10px, 0);
+          /*including the padding*/
+
+          @media screen and (min-width: $tablet) {
+            @include padding (10px, 0, 0, 0);
+            /*including the padding for table and desktop*/
+          }
+        }
+
+        .price__book {
+          @include Button_std180 ();
+          /*setting the font*/
+          @include margin (-10px, 0, 0, 0);
+          /*including the margin*/
+
+          @include setLinkdecor;
+        }
+      }
+
+      .column {
+
+        .photos {
+
+          .photo__items {
+            position: relative;
+            /*position relative for the images*/
+            width: 80%;
+            /*setting the width*/
+            border: 1px solid transparent;
+            /*setting the border*/
+            border-image: $color--gradient;
+            /*setting the border color*/
+            border-image-slice: 1;
+            /*inward offset*/
+            @include padding (10px, 10px, 10px, 10px);
+            /*including the padding*/
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+            /*background layer to darken the images*/
+            @include margin (0, 0, 50px, 0);
+            /*including the margin*/
+          }
+
+          .img__text--primary,
+          .img__text--secondary,
+          .img__text--additional {
+
+            position: absolute;
+            /*setting position absolute for the text on top of the images*/
+            z-index: 100;
+            /*setting z-index so the text is visable*/
+            @include setBluuh2 ();
+            /*setting the font*/
+            color: $font-color--main;
+
+            width: 70%;
+            /*setting the width for the text*/
+            background: none;
+            /*removing background*/
+            @include padding (50px, 0, 0, 0);
+            /*including padding*/
+
+            @media screen and (min-width: $tablet) {
+              width: 20%;
+              /*setting the width for the tablet & desktop*/
+              @include padding (30px, 0, 0, 0);
+              /*setting the padding for tablet*/
+            }
+
+            @media screen and (min-width: $desktop) {
+              @include setBluuhsubt ();
+              /*setting the font for desktop*/
+              @include padding (50px, 0, 0, 0);
+              /*setting the padding for desktop*/
+            }
+          }
+
+          .img__text--primary {
+
+            left: 10%;
+            /*setting text position for mobile*/
+
+            @media screen and (min-width: $tablet) {
+
+              left: 10%;
+              /*setting text position for tablet*/
+            }
+
+            @media screen and (min-width: $desktop) {
+
+              left: 17%;
+              /*setting text position for desktop*/
+            }
+          }
+
+          .img__text--secondary {
+
+            left: 10%;
+            /*setting text position for mobile*/
+
+            @media screen and (min-width: $tablet) {
+
+              left: 40%;
+              /*setting text position for tablet*/
+            }
+
+            @media screen and (min-width: $desktop) {
+
+              left: 40%;
+              /*setting text position for desktop*/
+            }
+          }
+
+          .img__text--additional {
+
+            left: 10%;
+            /*setting text position for mobile*/
+
+            @media screen and (min-width: $tablet) {
+
+              left: 70%;
+              /*setting text position for tablet*/
+            }
+
+            @media screen and (min-width: $desktop) {
+
+              left: 64%;
+              /*setting text position for desktop*/
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* input type number */
+#basket {
+  background-color: #48483D;
+
+  .wrapper {
+    @include setWrapper (92%, 0 auto, 0 auto);
+
+    .row {
+
+      .column {
+
+        .title {
+          // title 
+          @include setFont ($roboto, 600, 24px, 32px);
+          color: $font-color--main;
+          text-align: start;
+        }
+
+        .basket {
+          // basket 
+          @include setWrapper (90%, 0, 0);
+          border-top: 3px solid transparent;
+          border-bottom: 3px solid transparent;
+          border-image: linear-gradient(90deg, #ECBC40 0%, #FFF1BA 51.04%, #EDBD41 100%);
+          border-image-slice: 1;
+          color: $font-color--main;
+
+          // condition section 
+          .basket__item {
+            @include setFlexbox (row, space-between, center, wrap);
+
+            .condition {
+              @include setFlexbox (column, center, start, nowrap);
+              @include setWrapper (30%, 0 0 0 1%, none);
+
+              .subtitle {
+                @include setWrapper (70%, 9% 0 0, 0);
+                @include setFont ($roboto, 600, 16px, 24px);
+              }
+
+              .age {
+                @include setDimensions (70%, auto, none);
+                @include setFont ($roboto, 400, 12px, 14px);
+              }
+            }
+
+            // input type number 
+            .input-number {
+              @include setFlexbox (row, space-between, center, wrap);
+              @include setDimensions (30%, auto, 6px);
+              align-items: center;
+              color: #424348;
+              font-size: 14px;
+              text-align: center;
+              background-color: #48483D;
+
+              .input-number__input {
+                @include setDimensions (33%, 32px, none);
+                border: none;
+                padding: 8px;
+                text-align: center;
+                background-color: #48483D;
+                color: $font-color--main;
+              }
+
+              .input-number__minus,
+              .input-number__plus {
+                @include setFlexbox (row, center, center, wrap);
+                @include setDimensions (24px, 24px, none);
+                @include setFont ($roboto, 500, 20px, 4px);
+                background-color: $color--disabled;
+                color: $font-color--main;
+                text-align: center;
+                border-radius: 50%;
+                user-select: none;
+                cursor: pointer;
+
+                &:hover {
+                  background: #988CE3;
+                  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                }
+
+                &:active {
+                  background-color: $color--primary
+                }
+              }
+
+
+
+            }
+
+            // price section
+            .price {
+              @include setWrapper (30%, 0, 2% 0 0);
+              @include setFont ($roboto, 600, 16px, 24px);
+              text-align: center;
+            }
+          }
+        }
+
+        // login button
+        .login {
+          @include setFlexbox (column, center, center, wrap);
+          @include setWrapper (90%, 2% 0, 2% 0 0);
+
+          .login-btn {
+            width: 180px;
+            display: inline;
+            @include padding (12px, 39px, 12px, 39px);
+            margin-bottom: 2%;
+            background: $color--primary;
+            color: $font-color--main;
+            @include setFont ($roboto, 500, 14px, auto);
+            text-align: center;
+            border-radius: 25px;
+            text-decoration: none;
+
+            &:hover {
+              background: #988CE3;
+              transition: 500ms ease-in;
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+          }
+
+          .login-text {
+            @include setFont ($roboto, 400, 14px, 16px);
+            color: $color--additional;
+            text-align: center;
+          }
+        }
+
+        .title-author {
+          @include setFont ($roboto, 600, 24px, 32px);
+          color: $font-color--main;
+          text-align: start;
+        }
+
+        // form block
+        .form {
+          @include setFlexbox (row, space-around, start, wrap);
+          padding: 4% 0 0;
+          border-top: 3px solid transparent;
+          border-image: linear-gradient(90deg, #ECBC40 0%, #FFF1BA 51.04%, #EDBD41 100%);
+          color: $font-color--main;
+          border-image-slice: 1;
+
+          .form__item {
+            width: 40%;
+            padding: 2% 0;
+
+            .form-label {
+              @include setFont ($roboto, 600, 14px, 12px);
+              margin: 0 0 4px;
+            }
+
+            .form-control {
+
+              &:focus {
+                border: 1px solid #988CE3;
+              }
+            }
+          }
+        }
+
+        // payment block
+        .pay {
+          @include setFlexbox (column, center, center, wrap);
+          @include setWrapper (auto, 4% 0, 0);
+
+          .pay-btn {
+            width: 280px;
+            display: inline;
+            @include padding (12px, 39px, 12px, 39px);
+            background: $color--gradient;
+            color: $font-color--black;
+            @include setFont ($roboto, 500, 14px, auto);
+            text-align: center;
+            border-radius: 25px;
+            text-decoration: none;
+
+            &:hover {
+              background: $color--secondary;
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+          }
+        }
+
+        // terms of use 
+        .terms {
+          @include setFont ($roboto, 400, 14px, 16px);
+          @include setWrapper (auto, 5% 0, 0);
+          color: $font-color--main;
+          text-align: center;
+
+          .terms-privacy {
+            @include setFont ($roboto, 400, 14px, 16px);
+            text-decoration: none;
+            color: gold;
+            border-bottom: 1px solid gold;
+
+            &:hover {
+              color: rgb(249, 157, 30);
+              border-bottom: 1px solid rgb(249, 157, 30);
+            }
+          }
+        }
+      }
+    }
+
+    .column {
+
+      .photos {
+        @include setFlexbox (row, center, center, nowrap);
+
+        .photo__items {
+          position: relative;
+          /*position relative for the images*/
+          width: 80%;
+          /*setting the width*/
+          border: 1px solid transparent;
+          /*setting the border*/
+          border-image: $color--gradient;
+          /*setting the border color*/
+          border-image-slice: 1;
+          /*inward offset*/
+          @include padding (10px, 10px, 10px, 10px);
+          /*including the padding*/
+          background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+          /*background layer to darken the images*/
+          @include margin (0, 0, 50px, 0);
+          /*including the margin*/
+        }
+
+        .img__text--primary,
+        .img__text--secondary,
+        .img__text--additional {
+          position: absolute;
+          /*setting position absolute for the text on top of the images*/
+          z-index: 100;
+          /*setting z-index so the text is visable*/
+          @include setBluuh2 ();
+          /*setting the font*/
+          width: 70%;
+          /*setting the width for the text*/
+          background: none;
+          /*removing background*/
+          @include padding (50px, 0, 0, 0);
+          /*including padding*/
+          color: $font-color--main;
+
+          @media screen and (min-width: $tablet) {
+            width: 20%;
+            /*setting the width for the tablet & desktop*/
+            @include padding (30px, 0, 0, 0);
+            /*setting the padding for tablet*/
+          }
+
+          @media screen and (min-width: $desktop) {
+            @include setBluuhsubt ();
+            /*setting the font for desktop*/
+            @include padding (50px, 0, 0, 0);
+            /*setting the padding for desktop*/
+          }
+        }
+
+        .img__text--primary {
+
+          left: 10%;
+          /*setting text position for mobile*/
+
+          @media screen and (min-width: $tablet) {
+
+            left: 10%;
+            /*setting text position for tablet*/
+          }
+
+          @media screen and (min-width: $desktop) {
+
+            left: 12%;
+            /*setting text position for desktop*/
+          }
+        }
+
+        .img__text--secondary {
+
+          left: 10%;
+          /*setting text position for mobile*/
+
+          @media screen and (min-width: $tablet) {
+
+            left: 40%;
+            /*setting text position for tablet*/
+          }
+
+          @media screen and (min-width: $desktop) {
+
+            left: 40%;
+            /*setting text position for desktop*/
+          }
+        }
+
+        .img__text--additional {
+
+          left: 10%;
+          /*setting text position for mobile*/
+
+          @media screen and (min-width: $tablet) {
+
+            left: 70%;
+            /*setting text position for tablet*/
+          }
+
+          @media screen and (min-width: $desktop) {
+
+            left: 66%;
+            /*setting text position for desktop*/
+          }
+        }
+      }
+
+    }
+  }
+}
+
+
+.bg1 {
+  background: url(../img/discovbanner.png) no-repeat scroll center;
+  transition: 2s background;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+}
+
+.bg2 {
+  background: url(../img/hogwarts.jpg) no-repeat scroll center;
+  transition: 2s background;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+}
+
+.bg3 {
+  background: url(../img/platform.jpg) no-repeat scroll center;
+  transition: 2s background;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+}
